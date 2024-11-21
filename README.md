@@ -68,11 +68,11 @@ git clone https://github.com/EnricW/1.5-Java_Utils.git
 ## ▶️ Compilació
 
 1. Navegueu al directori arrel del projecte.
-2. Per a cada exercici, compileu el codi amb la comanda:
+2. Per a cada exerciseX (on X és el número de l'exercici), compileu el codi amb la comanda:
 ```bash
-javac -d bin src/level1/exercise1/ListDirectory.java
+javac -d bin src/level1/exerciseX/*.java
 ```
-3. Això generarà el fitxer level1/exercise1/ListDirectory.class'.
+3. Això generarà el fitxer level1/exerciseX/ListDirectory.class'.
 
 ## ▶️ Execució
 

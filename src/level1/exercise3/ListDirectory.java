@@ -14,8 +14,11 @@ public class ListDirectory {
             return;
         }
 
-        File directory = new File(args[0]);
-        File outputFile = new File(args[1]);
+        String inputPath = args[0].replace("/", File.separator).replace("\\", File.separator);
+        String outputPath = args[1].replace("/", File.separator).replace("\\", File.separator);
+
+        File directory = new File(inputPath);
+        File outputFile = new File(outputPath);
 
         if (!directory.exists() || !directory.isDirectory()) {
             System.out.println("The specified path is not a valid directory.");

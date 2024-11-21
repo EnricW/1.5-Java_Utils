@@ -14,9 +14,13 @@ public class ListDirectory {
             return;
         }
 
-        File directory = new File(args[0]);
-        File outputFile = new File(args[1]);
-        File serializedFile = new File(args[2]);
+        String inputPath = args[0].replace("/", File.separator).replace("\\", File.separator);
+        String outputPath = args[1].replace("/", File.separator).replace("\\", File.separator);
+        String serializedPath = args[2].replace("/", File.separator).replace("\\", File.separator);
+
+        File directory = new File(inputPath);
+        File outputFile = new File(outputPath);
+        File serializedFile = new File(serializedPath);
 
         if (directory.exists() && directory.isDirectory()) {
             List<DirectoryInfo> directoryTreeContent = listTree(directory, 0);

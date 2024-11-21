@@ -14,7 +14,7 @@ public class ListDirectory {
             config.load(input);
         } catch (IOException ex) {
             System.out.println("Error loading the configuration file.");
-            ex.printStackTrace();
+            ex.getMessage();
             return;
         }
 
@@ -40,7 +40,7 @@ public class ListDirectory {
             System.out.println("Result saved to: " + outputFile.getPath());
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the output file.");
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 

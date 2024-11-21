@@ -31,7 +31,7 @@ public class ListDirectory {
             System.out.println("Result saved to: " + outputFile.getPath());
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the output file.");
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 

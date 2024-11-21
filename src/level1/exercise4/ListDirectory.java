@@ -31,7 +31,7 @@ public class ListDirectory {
                 System.out.println("Result saved to: " + outputFile.getPath());
             } catch (IOException e) {
                 System.out.println("An error occurred while writing to the output file.");
-                e.printStackTrace();
+                e.getMessage();
             }
         } else {
             System.out.println("The specified path is not a valid directory or an existing TXT file.");
@@ -69,7 +69,7 @@ public class ListDirectory {
             }
         } catch (IOException e) {
             System.out.println("An error occurred while reading the file.");
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 }

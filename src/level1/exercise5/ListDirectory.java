@@ -32,7 +32,7 @@ public class ListDirectory {
                 System.out.println("Result saved to: " + outputFile.getPath());
             } catch (IOException e) {
                 System.out.println("An error occurred while writing to the output file.");
-                e.printStackTrace();
+                e.getMessage();
             }
 
             serializeObject(directoryTreeContent, serializedFile);
@@ -75,7 +75,7 @@ public class ListDirectory {
             oos.writeObject(content);
         } catch (IOException e) {
             System.out.println("Error serializing the object.");
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 
@@ -84,7 +84,7 @@ public class ListDirectory {
             return (List<DirectoryInfo>) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Error deserializing the object.");
-            e.printStackTrace();
+            e.getMessage();
         }
         return new ArrayList<>();
     }

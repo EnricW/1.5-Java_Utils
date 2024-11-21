@@ -72,7 +72,7 @@ git clone https://github.com/EnricW/1.5-Java_Utils.git
 ```bash
 javac -d bin src/level1/exerciseX/*.java
 ```
-3. Això generarà el fitxer level1/exerciseX/ListDirectory.class'.
+3. Això generarà el fitxer 'level1/exerciseX/ListDirectory.class'.
 
 ## ▶️ Execució
 

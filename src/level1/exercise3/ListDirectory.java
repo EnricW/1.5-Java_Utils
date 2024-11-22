@@ -10,7 +10,7 @@ import java.util.Date;
 public class ListDirectory {
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.out.println("Usage: java ListDirectory <directory> <output_file.txt>");
+            System.out.println("Usage: java level1.exercise3.ListDirectory \"path/to/input/directory\" \"path/to/output/file.txt\"");
             return;
         }
 

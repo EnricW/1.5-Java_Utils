@@ -10,7 +10,7 @@ import java.util.List;
 public class ListDirectory {
     public static void main(String[] args) {
         if (args.length < 3) {
-            System.out.println("Usage: java ListDirectory <directory> <output_file.txt> <serialized_file.ser>");
+            System.out.println("Usage: java level1.exercise3.ListDirectory \"path/to/input/directory\" \"path/to/output/file.txt\" \"path/to/output/serializedFile.ser\"");
             return;
         }
 

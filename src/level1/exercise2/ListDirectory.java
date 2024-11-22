@@ -8,7 +8,7 @@ import java.util.Date;
 public class ListDirectory {
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: java ListDirectory <directory>");
+            System.out.println("Usage: java level1.exercise2.ListDirectory \"path/to/directory\"");
             return;
         }
 

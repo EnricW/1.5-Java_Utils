@@ -9,12 +9,13 @@ import java.util.Properties;
 public class ListDirectory {
     public static void main(String[] args) {
         Properties config = new Properties();
+        String configPath = "src" + File.separator + "resources" + File.separator + "config.properties";
 
-        try (InputStream input = new FileInputStream("config.properties")) {
+        try (InputStream input = new FileInputStream(configPath)) {
             config.load(input);
         } catch (IOException ex) {
-            System.out.println("Error loading the configuration file.");
-            ex.getMessage();
+            System.out.println("Error loading the configuration file: " + configPath);
+            System.out.println("Error details: " + ex.getMessage());
             return;
         }
 
@@ -28,6 +29,17 @@ public class ListDirectory {
 
         File directory = new File(directoryPath);
         File outputFile = new File(outputFilePath);
+
+        File outputDir = outputFile.getParentFile();
+        if (!outputDir.exists()) {
+            boolean created = outputDir.mkdirs();
+            if (created) {
+                System.out.println("Created output directory: " + outputDir.getPath());
+            } else {
+                System.out.println("Failed to create output directory: " + outputDir.getPath());
+                return;
+            }
+        }
 
         if (!directory.exists() || !directory.isDirectory()) {
             System.out.println("The specified path is not a valid directory.");

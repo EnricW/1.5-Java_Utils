@@ -68,20 +68,40 @@ git clone https://github.com/EnricW/1.5-Java_Utils.git
 ## ▶️ Compilació
 
 1. Navegueu al directori arrel del projecte.
-2. Per a cada exerciseX (on X és el número de l'exercici), compileu el codi amb la comanda:
+2. Nivell 1: Per a cada exerciseX (on X és el número de l'exercici), compileu el codi amb la comanda:
 ```bash
 javac -d bin src/level1/exerciseX/*.java
 ```
-3. Això generarà el fitxer 'level1/exerciseX/ListDirectory.class'.
+3. Nivell 2: Compileu el codi amb la comanda:
+```bash
+javac -d bin src/level2/exercise1/ListDirectory.java
+```
 
 ## ▶️ Execució
 
-1. Navega fins a la classe principal que conté el mètode main a la terminal.
+1. Navegueu al directori arrel del projecte.
 2. Per a cada exercici del nivell 1, fes servir les comandes corresponents:
-   - Exercici 1: java -cp bin level1.exercise1.ListDirectory "path/to/your/directory"
-   - Exercici 2: java -cp bin level1.exercise2.ListDirectory "path/to/your/directory"
-   - Exercici 3: java -cp bin level1.exercise3.ListDirectory "path/to/your/directory" <output_file.txt>
-   - Exercici 4: java -cp bin level1.exercise4.ListDirectory "path/to/your/directory" <output_file.txt>
-   - Exercici 5: java -cp bin level1.exercise5.ListDirectory "path/to/your/directory" <output_file.txt> <serialized_file.ser>
-3. Per a l'exercici del nivell 2, edita el fitxer config.properties per indicar el directori d’entrada i el fitxer de sortida i a la terminal exercuta:
-   - Exercici 1: java -cp bin level2.exercise1.ListDirectory
+   - Exercici 1:
+   ```bash
+   java -cp bin level1.exercise1.ListDirectory "ruta/al/directori"
+   ```
+   - Exercici 2:
+   ```bash
+   java -cp bin level1.exercise2.ListDirectory "ruta/al/directori"
+   ```
+   - Exercici 3:
+   ```bash
+   java -cp bin level1.exercise3.ListDirectory "ruta/al/directori" "ruta/al/fitxer/sortida.txt"
+   ```
+   - Exercici 4:
+   ```bash
+   java -cp bin level1.exercise4.ListDirectory "ruta/al/directori" "ruta/al/fitxer/sortida.txt"
+   ```
+   - Exercici 5:
+   ```bash
+   java -cp bin level1.exercise5.ListDirectory "ruta/al/directori" "ruta/al/fitxer/sortida.txt" "ruta/al/fitxer.ser"
+   ```
+3. Per a l'exercici 1 del nivell 2, edita el fitxer config.properties per indicar el directori d’entrada i el fitxer de sortida i a la terminal exercuta:
+   ```bash
+   java -cp "bin;src/resources" level2.exercise1.ListDirectory
+   ```

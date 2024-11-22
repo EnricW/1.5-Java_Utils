@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class ListDirectory {
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: java ListDirectory <directory>");
+            System.out.println("Usage: java level1.exercise1.ListDirectory \"path/to/directory\"");
             return;
         }
 

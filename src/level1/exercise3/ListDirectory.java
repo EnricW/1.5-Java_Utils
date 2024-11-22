@@ -20,6 +20,17 @@ public class ListDirectory {
         File directory = new File(inputPath);
         File outputFile = new File(outputPath);
 
+        File outputDir = outputFile.getParentFile();
+        if (!outputDir.exists()) {
+            boolean created = outputDir.mkdirs();
+            if (created) {
+                System.out.println("Created output directory: " + outputDir.getPath());
+            } else {
+                System.out.println("Failed to create output directory: " + outputDir.getPath());
+                return;
+            }
+        }
+
         if (!directory.exists() || !directory.isDirectory()) {
             System.out.println("The specified path is not a valid directory.");
             return;
